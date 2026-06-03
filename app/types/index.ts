@@ -71,3 +71,38 @@ export interface NavItem {
   districtName: string;
   href: string;
 }
+// ── existing types above this line ──────────────────────────────
+
+export interface District {
+  id: string;
+  name: string;
+  sectionId: string;
+  icon: string;
+  accentColor: string;
+  mapPosition: { x: number; y: number };
+  description: string;
+  population: string;
+  status: string;
+}
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  trigger: "visit" | "scroll" | "click" | "time";
+  triggerValue?: string;
+  rarity: "common" | "rare" | "legendary";
+}
+
+export interface WorldMetadata {
+  version: string;
+  cityStatus: string;
+  totalProjects: number;
+  totalDistricts: number;
+  lastUpdated: string;
+}
+
+export type DeviceCapability = "high" | "medium" | "low";
+
+export type NimbaraMode = "scroll" | "explore";

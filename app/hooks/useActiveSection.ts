@@ -1,9 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useNimbaraStore } from "@/app/store/nimbaraStore";
+import { getDistrictBySectionId } from "@/app/lib/districts";
 
 export function useActiveSection(sectionIds: string[]): string {
   const [activeSection, setActiveSection] = useState<string>("");
+  const setActiveDistrict = useNimbaraStore((s) => s.setActiveDistrict);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -15,6 +18,12 @@ export function useActiveSection(sectionIds: string[]): string {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(sectionId);
+
+          // Sync to Zustand store
+          const district = getDistrictBySectionId(sectionId);
+          if (district) {
+            setActiveDistrict(district.id);
+          }
         }
       });
     };
@@ -37,7 +46,7 @@ export function useActiveSection(sectionIds: string[]): string {
     return () => {
       observers.forEach((obs) => obs.disconnect());
     };
-  }, [sectionIds]);
+  }, [sectionIds, setActiveDistrict]);
 
   return activeSection;
 }

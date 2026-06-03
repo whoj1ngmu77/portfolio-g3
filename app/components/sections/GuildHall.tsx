@@ -2,47 +2,64 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Calendar, CheckCircle2 } from "lucide-react";
-import SectionHeader from "@/app/components/ui/SectionHeader";
+import DistrictHeader from "@/app/components/ui/DistrictHeader";
 import { EXPERIENCES } from "@/app/lib/data";
 
 const TYPE_COLORS: Record<string, string> = {
-  internship: "var(--teal)",
-  job: "var(--brass)",
-  research: "var(--lavender)",
+  internship:   "var(--teal)",
+  job:          "var(--brass)",
+  research:     "var(--lavender)",
   volunteering: "var(--ember)",
 };
 const TYPE_LABELS: Record<string, string> = {
-  internship: "Internship",
-  job: "Full-time",
-  research: "Research",
+  internship:   "Internship",
+  job:          "Full-time",
+  research:     "Research",
   volunteering: "Volunteering",
 };
 
+function ColumnDecoration() {
+  return (
+    <svg aria-hidden="true" style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 3, pointerEvents: "none", opacity: 0.15 }} preserveAspectRatio="none" viewBox="0 0 3 100">
+      <defs>
+        <linearGradient id="colGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="var(--brass)" stopOpacity="0" />
+          <stop offset="30%" stopColor="var(--brass)" stopOpacity="1" />
+          <stop offset="70%" stopColor="var(--brass)" stopOpacity="1" />
+          <stop offset="100%" stopColor="var(--brass)" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <rect width="3" height="100" fill="url(#colGrad)" />
+    </svg>
+  );
+}
+
 export default function GuildHall() {
   return (
-    <section id="experience" aria-label="Experience — The Guild Hall">
+    <section id="experience" aria-label="Experience — The Guild Hall" style={{ position: "relative" }}>
+      {/* Structural background accent */}
+      <div aria-hidden="true" style={{
+        position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
+        backgroundImage: "repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(212,168,67,0.015) 80px, rgba(212,168,67,0.015) 81px)",
+        pointerEvents: "none",
+      }} />
+
       <div className="section-wrapper">
-        <SectionHeader
-          districtLabel="The Guild Hall"
+        <DistrictHeader
+          districtName="The Guild Hall"
           title="Where I've"
           titleHighlight="Worked"
           subtitle="Roles, responsibilities, and the real-world chapters that shaped how I think and build."
+          icon="🏛️"
+          accentColor="var(--brass)"
         />
 
-        {/* Timeline */}
         <div style={{ position: "relative" }}>
-          {/* Vertical line */}
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              left: "0",
-              top: 8,
-              bottom: 8,
-              width: 1,
-              background: "linear-gradient(to bottom, transparent, var(--dusk-mid) 10%, var(--dusk-mid) 90%, transparent)",
-            }}
-          />
+          {/* Timeline line */}
+          <div aria-hidden="true" style={{
+            position: "absolute", left: 0, top: 8, bottom: 8, width: 1,
+            background: "linear-gradient(to bottom, transparent, var(--dusk-mid) 10%, var(--dusk-mid) 90%, transparent)",
+          }} />
 
           <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
             {EXPERIENCES.map((exp, i) => {
@@ -58,23 +75,17 @@ export default function GuildHall() {
                   aria-label={`${exp.role} at ${exp.organization}`}
                 >
                   {/* Timeline dot */}
-                  <div
-                    aria-hidden="true"
-                    style={{
-                      position: "absolute",
-                      left: -5,
-                      top: 8,
-                      width: 11,
-                      height: 11,
-                      borderRadius: "50%",
-                      background: accentColor,
-                      boxShadow: `0 0 14px ${accentColor}`,
-                      border: "2px solid var(--bg-primary)",
-                    }}
-                  />
+                  <div aria-hidden="true" style={{
+                    position: "absolute", left: -5, top: 8,
+                    width: 11, height: 11, borderRadius: "50%",
+                    background: accentColor,
+                    boxShadow: `0 0 14px ${accentColor}`,
+                    border: "2px solid var(--bg-primary)",
+                  }} />
 
-                  <div className="glass-card" style={{ padding: "1.75rem" }}>
-                    {/* Header */}
+                  <div className="glass-card" style={{ padding: "1.75rem", position: "relative", overflow: "hidden" }}>
+                    <ColumnDecoration />
+
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.75rem", marginBottom: "0.75rem" }}>
                       <div>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem" }}>
@@ -89,42 +100,27 @@ export default function GuildHall() {
                             {TYPE_LABELS[exp.type]}
                           </span>
                         </div>
-                        <h3 style={{
-                          fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "1.15rem",
-                          color: "var(--text-primary)", letterSpacing: "-0.02em",
-                        }}>
+                        <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "1.15rem", color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
                           {exp.role}
                         </h3>
-                        <p style={{
-                          fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "0.95rem",
-                          color: "var(--text-secondary)", marginTop: "0.1rem",
-                        }}>
+                        <p style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "0.95rem", color: "var(--text-secondary)", marginTop: "0.1rem" }}>
                           {exp.organization}
                         </p>
                       </div>
-
                       <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", alignItems: "flex-end" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
                           <Calendar size={12} aria-hidden="true" style={{ color: "var(--text-muted)" }} />
-                          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--text-muted)" }}>
-                            {exp.startDate} — {exp.endDate}
-                          </span>
+                          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--text-muted)" }}>{exp.startDate} — {exp.endDate}</span>
                         </div>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
                           <MapPin size={12} aria-hidden="true" style={{ color: "var(--text-muted)" }} />
-                          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--text-muted)" }}>
-                            {exp.location}
-                          </span>
+                          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "var(--text-muted)" }}>{exp.location}</span>
                         </div>
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.65, marginBottom: "1rem" }}>
-                      {exp.description}
-                    </p>
+                    <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: 1.65, marginBottom: "1rem" }}>{exp.description}</p>
 
-                    {/* Highlights */}
                     <ul style={{ display: "flex", flexDirection: "column", gap: "0.4rem", listStyle: "none" }}>
                       {exp.highlights.map((h, hi) => (
                         <li key={hi} style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem" }}>

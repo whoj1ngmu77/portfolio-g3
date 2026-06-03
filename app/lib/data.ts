@@ -1,3 +1,18 @@
+export const PERSONAL = {
+  name: "Gayathri Menon",
+  email: "gmenon.workco@gmail.com",
+  linkedin: "https://www.linkedin.com/in/gayathri-menon-328376274/",
+  github: "https://github.com/whoj1ngmu77",
+  location: "Delhi, India",
+  university: "Vellore Institute of Technology",
+  degree: "BTech, Electrical and Computer Science Engineering",
+  year: "3rd Year",
+  cgpa: "8.3 / 10.0",
+  graduation: "July 2028",
+  headshot: "/gayathri-headshot.png",
+  resume: "/Resume-Gayathri.pdf",
+  tagline: "Engineer by training. Builder by nature. Designer at heart.",
+};
 import type {
   Project,
   SkillCategory,
@@ -9,70 +24,70 @@ import type {
 } from "@/app/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Projects", districtName: "Innovation District", href: "#projects" },
-  { label: "Skills", districtName: "Skills Garden", href: "#skills" },
-  { label: "Experience", districtName: "Guild Hall", href: "#experience" },
-  { label: "Journey", districtName: "Memory Lane", href: "#journey" },
-  { label: "Design", districtName: "Studio District", href: "#design" },
-  { label: "Contact", districtName: "The Beacon", href: "#contact" },
+  { label: "Projects",    districtName: "Innovation District", href: "#projects"       },
+  { label: "Skills",      districtName: "Skills Garden",       href: "#skills"         },
+  { label: "Experience",  districtName: "Guild Hall",          href: "#experience"     },
+  { label: "Vision",      districtName: "The Vision Tower",    href: "#vision"         },
+  { label: "Design",      districtName: "Studio District",     href: "#design"         },
+  { label: "Contact",     districtName: "The Beacon",          href: "#contact"        },
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: "p1",
-    title: "Neural Skies",
+    title: "Personal Finance Intelligence System",
     description:
-      "A deep learning model that classifies cloud formations from satellite imagery using CNNs, achieving 94% accuracy across 11 cloud types.",
+      "AI-powered financial analytics dashboard that transforms raw transaction data into spending intelligence, behavioral insights, risk detection, and predictive analytics.",
     longDescription:
-      "Built a convolutional neural network pipeline to classify cloud formations from satellite data. Includes a full preprocessing workflow, data augmentation strategies, and a lightweight inference API.",
-    techStack: ["Python", "TensorFlow", "OpenCV", "FastAPI", "Docker"],
-    githubUrl: "#",
+      "Upload raw bank statements, UPI history, or CSV files and instantly get spending analytics, behavioral intelligence (late-night spending, impulse purchases), overspending risk prediction, financial health scoring, and smart personalized recommendations. Built to simulate a real-world fintech system.",
+    techStack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly", "Machine Learning"],
+    githubUrl: "https://github.com/whoj1ngmu77/personal-finance-intelligence-system",
+    liveUrl: "#",
+    category: "data",
+    featured: true,
+    year: 2025,
+  },
+  {
+    id: "p2",
+    title: "SonicClear",
+    description:
+      "Real-time speech enhancement system using DSP and deep learning — spectral gating with Ideal Ratio Masking to suppress background noise and improve speech clarity in low-SNR environments.",
+    longDescription:
+      "SonicClear uses Ideal Ratio Masking (IRM) and neural noise suppression to clean audio in real time. Built a low-latency streaming pipeline in Python with librosa and PyTorch. Applicable to transcription tools, accessibility software, and voice interfaces.",
+    techStack: ["Python", "PyTorch", "librosa", "DSP", "IRM", "Deep Learning"],
+    githubUrl: "https://github.com/whoj1ngmu77/SonicClear-Real-Time-Speech-Enhancement-System",
     liveUrl: "#",
     category: "ai",
     featured: true,
     year: 2024,
   },
   {
-    id: "p2",
-    title: "DataLens",
+    id: "p3",
+    title: "Notevera AI",
     description:
-      "An interactive data visualization dashboard that transforms complex CSV datasets into explorable visual stories with real-time filtering.",
+      "Smart AI platform that converts study material into organised notes, study planners, and personalised learning resources using NLP and transformer-based models.",
     longDescription:
-      "End-to-end data pipeline and visualization tool built for non-technical users. Features drag-and-drop CSV upload, automatic chart recommendations, and shareable dashboard links.",
-    techStack: ["React", "D3.js", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    githubUrl: "#",
+      "Built an AI-driven note-taking assistant that auto-summarizes, tags, and organizes study material using transformer-based NLP. Features a conversational interface for natural-language note querying and a responsive frontend. Designed to reduce cognitive load for students.",
+    techStack: ["Python", "Transformers", "NLP", "HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/whoj1ngmu77/Notevera-ai",
     liveUrl: "#",
-    category: "data",
+    category: "ai",
     featured: true,
     year: 2024,
   },
   {
-    id: "p3",
-    title: "CircuitChat",
-    description:
-      "A real-time collaborative IDE with integrated AI code suggestions, live syntax highlighting, and multi-user cursor tracking.",
-    longDescription:
-      "Collaborative coding environment with WebSocket-powered real-time sync, AI-assisted code completion via Anthropic API, and support for 15+ programming languages.",
-    techStack: ["Next.js", "TypeScript", "WebSockets", "Redis", "Anthropic API"],
-    githubUrl: "#",
-    liveUrl: "#",
-    category: "software",
-    featured: true,
-    year: 2023,
-  },
-  {
     id: "p4",
-    title: "Solarpunk UI Kit",
+    title: "Face Recognition System",
     description:
-      "A comprehensive open-source design system inspired by solarpunk aesthetics — warm, organic, and future-forward component library.",
+      "Computer vision project using OpenCV to detect and recognise faces in real time — built as a foundational exploration of image processing and CV pipelines.",
     longDescription:
-      "50+ Figma components and React primitives with full accessibility support, dark/light variants, and documentation site. Used by 200+ designers in the community.",
-    techStack: ["Figma", "React", "Storybook", "CSS Variables", "TypeScript"],
-    githubUrl: "#",
+      "Implemented a face detection and recognition pipeline using OpenCV's Haar cascade classifiers and LBPH face recognizer. Supports real-time webcam input and static image recognition. An early hands-on project that sparked a deeper interest in computer vision.",
+    techStack: ["Python", "OpenCV", "Computer Vision", "Haar Cascade", "LBPH"],
+    githubUrl: "https://github.com/whoj1ngmu77/FaceRecognition-opencvproject",
     liveUrl: "#",
-    category: "design",
+    category: "ai",
     featured: false,
-    year: 2023,
+    year: 2024,
   },
 ];
 
@@ -152,188 +167,99 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const EXPERIENCES: Experience[] = [
   {
     id: "e1",
-    role: "Data Science Intern",
-    organization: "TechCorp Analytics",
+    role: "Creative Design Intern",
+    organization: "Spectov Startup",
     type: "internship",
-    startDate: "May 2024",
-    endDate: "August 2024",
+    startDate: "Jan 2026",
+    endDate: "Jul 2026",
     description:
-      "Worked within the data intelligence team to build predictive models and automated reporting pipelines for business stakeholders.",
+      "Produced social media graphics, UI mockups, and brand assets for a growing startup using Canva and Figma, maintaining visual consistency across all digital deliverables.",
     highlights: [
-      "Built an ML pipeline that reduced report generation time by 60%",
-      "Analysed datasets of 1M+ rows using Pandas and Spark",
-      "Presented findings to cross-functional teams weekly",
-      "Contributed to internal Python tooling used across 3 departments",
-    ],
-    location: "Bengaluru, India",
-  },
-  {
-    id: "e2",
-    role: "Research Assistant — NLP Lab",
-    organization: "University Research Division",
-    type: "research",
-    startDate: "January 2024",
-    endDate: "Present",
-    description:
-      "Assisting faculty researchers in developing NLP tools for low-resource South Indian languages, focusing on text classification and sentiment analysis.",
-    highlights: [
-      "Curating and annotating a novel Malayalam dataset of 50K samples",
-      "Experimenting with fine-tuned BERT variants for regional language tasks",
-      "Co-authoring a workshop paper submission",
+      "Produced social media graphics, UI mockups, and brand assets using Canva and Figma",
+      "Maintained visual consistency across all digital deliverables",
+      "Collaborated with cross-functional teams to iterate on designs under deadlines",
+      "Incorporated stakeholder feedback to meet business objectives",
     ],
     location: "Remote",
-  },
-  {
-    id: "e3",
-    role: "UI/UX Design Lead",
-    organization: "IEEE Student Branch",
-    type: "volunteering",
-    startDate: "August 2023",
-    endDate: "Present",
-    description:
-      "Leading the visual identity and digital design for the university's IEEE chapter, creating all event collateral, social media graphics, and website assets.",
-    highlights: [
-      "Redesigned the chapter website increasing engagement by 40%",
-      "Created design systems for consistent brand across all events",
-      "Mentored junior members in Figma and design fundamentals",
-    ],
-    location: "On-campus",
   },
 ];
 
 export const CERTIFICATIONS: Certification[] = [
   {
     id: "c1",
-    title: "Machine Learning Specialization",
-    issuer: "DeepLearning.AI / Coursera",
-    date: "October 2024",
+    title: "IBM Generative AI Using IBM WatsonX",
+    issuer: "IBM",
+    date: "2024",
     credentialUrl: "#",
     category: "technical",
   },
   {
     id: "c2",
-    title: "TensorFlow Developer Certificate",
-    issuer: "Google",
-    date: "August 2024",
+    title: "Frontend Development Certification",
+    issuer: "Coursera",
+    date: "2024",
     credentialUrl: "#",
     category: "technical",
   },
   {
     id: "c3",
-    title: "Google Data Analytics Professional Certificate",
-    issuer: "Google / Coursera",
-    date: "March 2024",
+    title: "Data Analytics Certification",
+    issuer: "DeepLearning.AI / Coursera",
+    date: "2024",
     credentialUrl: "#",
     category: "technical",
   },
   {
     id: "c4",
-    title: "UI/UX Design Professional Certificate",
-    issuer: "Google / Coursera",
-    date: "December 2023",
+    title: "Google Solution Challenge Participant",
+    issuer: "Google",
+    date: "2024",
     credentialUrl: "#",
-    category: "design",
+    category: "other",
+  },
+];
+export const VISION_CARDS = [
+  {
+    id: "v1",
+    icon: "🚀",
+    title: "Why I Build",
+    content:
+      "I enjoy turning ideas into things people can actually use. Whether it's a machine learning project, a data dashboard, a design concept, or a web application, I'm most motivated when I'm solving a real problem and learning something new along the way. For me, technology is more than code — it's a way to create experiences, improve decisions, and make complex things easier for people.",
+    accentColor: "var(--teal)",
   },
   {
-    id: "c5",
-    title: "AWS Cloud Practitioner Essentials",
-    issuer: "Amazon Web Services",
-    date: "September 2023",
-    credentialUrl: "#",
-    category: "technical",
+    id: "v2",
+    icon: "✨",
+    title: "What Makes Me Different",
+    content:
+      "I enjoy exploring the space between engineering, data, and design. While many people choose one path, I like understanding both how something works and how people experience it. That curiosity has led me to experiment with AI, data analytics, web development, design systems, and creative problem solving. I believe the best solutions happen when technical thinking and creativity work together.",
+    accentColor: "var(--brass)",
   },
   {
-    id: "c6",
-    title: "Python for Data Science, AI & Development",
-    issuer: "IBM / Coursera",
-    date: "June 2023",
-    credentialUrl: "#",
-    category: "technical",
+    id: "v3",
+    icon: "🎯",
+    title: "What I'm Looking For",
+    content:
+      "I'm looking for opportunities that challenge me to learn faster, think deeper, and contribute to meaningful work. I enjoy environments where curiosity is encouraged, experimentation is welcomed, and people care about building things well. My current focus is growing toward a career in Data Science, Analytics, Machine Learning, and technology-driven problem solving.",
+    accentColor: "var(--ember)",
+  },
+  {
+    id: "v4",
+    icon: "🌟",
+    title: "Long-Term Vision",
+    content:
+      "I want to build products and solutions that combine data, technology, and human-centered design. My goal is not just to write code or analyze data. I want to create things that are useful, intuitive, and impactful — the kind of work that helps people make better decisions, solve real problems, and experience technology in a better way.",
+    accentColor: "var(--lavender)",
   },
 ];
 
-export const JOURNEY_MILESTONES: JourneyMilestone[] = [
-  {
-    id: "j1",
-    year: "2022",
-    month: "August",
-    title: "The Journey Begins",
-    description:
-      "Enrolled in Electrical and Computer Science Engineering. Showed up with a laptop, curiosity, and absolutely no idea what I was getting into. That first week of C programming humbled me instantly.",
-    type: "education",
-    emoji: "🎓",
-  },
-  {
-    id: "j2",
-    year: "2022",
-    month: "November",
-    title: "First Line of Code That Actually Worked",
-    description:
-      "Spent 3 hours debugging a segmentation fault. When it finally ran — I felt like I could build anything. That feeling hasn't left.",
-    type: "skill",
-    emoji: "⚡",
-  },
-  {
-    id: "j3",
-    year: "2023",
-    month: "February",
-    title: "Discovered Python & Fell in Love with Data",
-    description:
-      "A senior recommended I try Python for a small project. Two weeks later I had gone down a complete data science rabbit hole and was analysing cricket match statistics at 2am. No regrets.",
-    type: "skill",
-    emoji: "🐍",
-  },
-  {
-    id: "j4",
-    year: "2023",
-    month: "June",
-    title: "First Design Project Published",
-    description:
-      "Created event posters for a college fest. People stopped in the hallway to look at them. That was the moment I realised design and engineering aren't separate — they're the same curiosity.",
-    type: "project",
-    emoji: "🎨",
-  },
-  {
-    id: "j5",
-    year: "2023",
-    month: "August",
-    title: "Joined IEEE — Became Design Lead",
-    description:
-      "Said yes before knowing what it would involve. Redesigned the chapter's entire visual identity. Learned that leadership means caring about the details everyone else skips.",
-    type: "achievement",
-    emoji: "🏛️",
-  },
-  {
-    id: "j6",
-    year: "2024",
-    month: "January",
-    title: "First ML Model Trained",
-    description:
-      "Built my first image classifier. It was a hot dog / not hot dog clone. It worked 70% of the time. I was unreasonably proud. Started the ML Specialisation the same week.",
-    type: "skill",
-    emoji: "🧠",
-  },
-  {
-    id: "j7",
-    year: "2024",
-    month: "May",
-    title: "First Internship",
-    description:
-      "Walked into a real office, with real deadlines, and real stakeholders. Terrifying and exhilarating. Learned more in 3 months than I expected, and confirmed that data science is where I want to be.",
-    type: "achievement",
-    emoji: "💼",
-  },
-  {
-    id: "j8",
-    year: "2024",
-    month: "October",
-    title: "Building Nimbara",
-    description:
-      "Decided my portfolio should look like my brain feels — a city of ideas floating in the sky. Currently building it. You are standing in it right now.",
-    type: "reflection",
-    emoji: "🌤️",
-  },
-];
+export const MISSION_LOG = {
+  objective: "Become an exceptional Data Scientist.",
+  focus: ["Data Analytics", "Machine Learning", "Problem Solving", "Building Real Projects"],
+  values: ["Curiosity", "Consistency", "Creativity", "Continuous Learning"],
+  cityStatus: "EXPANDING",
+  version: "Nimbara v1.0",
+};
 
 export const DESIGN_WORKS: DesignWork[] = [
   {
