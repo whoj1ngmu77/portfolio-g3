@@ -18,7 +18,6 @@ import type {
   SkillCategory,
   Experience,
   Certification,
-  JourneyMilestone,
   DesignWork,
   NavItem,
 } from "@/app/types";
