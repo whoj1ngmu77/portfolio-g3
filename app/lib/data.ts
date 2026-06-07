@@ -9,7 +9,7 @@ export const PERSONAL = {
   year: "3rd Year",
   cgpa: "8.3 / 10.0",
   graduation: "July 2028",
-  headshot: "/gayathri-headshot.png",
+  headshot: "/Gayathri_headshot.png",
   resume: "/Resume-Gayathri.pdf",
   tagline: "Engineer by training. Builder by nature. Designer at heart.",
 };
