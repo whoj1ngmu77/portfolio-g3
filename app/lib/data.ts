@@ -88,6 +88,20 @@ export const PROJECTS: Project[] = [
     featured: false,
     year: 2024,
   },
+  {
+    id: "p5",
+    title: "AI Research Assistant",
+    description:
+      "Full-stack RAG application where users upload PDFs and ask natural language questions — answers are grounded in the document with page-level source citations, streaming token-by-token like ChatGPT.",
+    longDescription:
+      "Built a production-quality RAG pipeline: PDF parsing with pypdf, semantic chunking via LangChain, 3072-dimensional Gemini embeddings stored in ChromaDB with per-user metadata filtering, and answer generation with Gemini 2.5 Flash. V2 adds Google OAuth authentication, persistent chat session history with SQLite, real-time streaming responses via Server-Sent Events, and a live usage analytics dashboard. Deployed on Vercel (frontend) and Render (backend).",
+    techStack: ["Python", "FastAPI", "Next.js", "TypeScript", "Gemini API", "ChromaDB", "LangChain", "SQLAlchemy", "NextAuth", "Tailwind CSS"],
+    githubUrl: "https://github.com/whoj1ngmu77/ai-research-assistant",
+    liveUrl: "https://ai-research-assistant-ean8jjj6i.vercel.app",
+    category: "ai",
+    featured: true,
+    year: 2026,
+  },
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
