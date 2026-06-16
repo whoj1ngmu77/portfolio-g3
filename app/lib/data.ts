@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
       "Built an AI-driven note-taking assistant that auto-summarizes, tags, and organizes study material using transformer-based NLP. Features a conversational interface for natural-language note querying and a responsive frontend. Designed to reduce cognitive load for students.",
     techStack: ["Python", "Transformers", "NLP", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/whoj1ngmu77/Notevera-ai",
-    liveUrl: "#",
+    liveUrl: "https://notevera-ai.vercel.app/",
     category: "ai",
     featured: true,
     year: 2024,
