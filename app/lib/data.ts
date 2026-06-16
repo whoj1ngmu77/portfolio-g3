@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
       "SonicClear uses Ideal Ratio Masking (IRM) and neural noise suppression to clean audio in real time. Built a low-latency streaming pipeline in Python with librosa and PyTorch. Applicable to transcription tools, accessibility software, and voice interfaces.",
     techStack: ["Python", "PyTorch", "librosa", "DSP", "IRM", "Deep Learning"],
     githubUrl: "https://github.com/whoj1ngmu77/SonicClear-Real-Time-Speech-Enhancement-System",
-    liveUrl: "#",
+    liveUrl: "https://sonic-real-time-speech-enhancement-system.streamlit.app/",
     category: "ai",
     featured: true,
     year: 2024,
