@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
       "Upload raw bank statements, UPI history, or CSV files and instantly get spending analytics, behavioral intelligence (late-night spending, impulse purchases), overspending risk prediction, financial health scoring, and smart personalized recommendations. Built to simulate a real-world fintech system.",
     techStack: ["Python", "Streamlit", "Pandas", "Scikit-learn", "Plotly", "Machine Learning"],
     githubUrl: "https://github.com/whoj1ngmu77/personal-finance-intelligence-system",
-    liveUrl: "#",
+    liveUrl: "https://finintel.streamlit.app/",
     category: "data",
     featured: true,
     year: 2025,
