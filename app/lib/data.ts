@@ -130,10 +130,10 @@ export const PROJECTS: Project[] = [
     featured: true,
     year: 2026,
   },
-  {
+{
   id: "p8",
   title: "AI UX Auditor",
-  shortDescription: "Autonomous multi-agent AI system that audits any website for UX and accessibility issues",
+  description: "Autonomous multi-agent AI system that audits any website for UX and accessibility issues",
   longDescription: "Built a LangGraph-orchestrated multi-agent pipeline: Agent 1 autonomously crawls the site with Playwright taking desktop and mobile screenshots, Agent 2 uses Groq Vision (Llama 4 Scout) to analyze screenshots for UX issues, Agent 3 scans raw HTML against WCAG 2.1 accessibility rules, Agent 4 synthesizes findings into a scored report with top fixes. Features PDF export and a beautiful Next.js dashboard with score rings. Deployed on Render via Docker and Vercel.",
   techStack: ["Next.js 15", "TypeScript", "FastAPI", "LangGraph", "Playwright", "Groq", "Python", "Docker", "Tailwind CSS"],
   githubUrl: "https://github.com/whoj1ngmu77/ai-ux-auditor",
